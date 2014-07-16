@@ -41,8 +41,14 @@
     
     // create and add a 3d box to the scene
     SCNNode *boxNode = [SCNNode node];
-    boxNode.geometry = [SCNBox boxWithWidth:1 height:1 length:1 chamferRadius:0.02];
+    boxNode.geometry = [SCNBox boxWithWidth:0.3 height:0.3 length:0.3 chamferRadius:0.02];
     [scene.rootNode addChildNode:boxNode];
+    
+    //create ball node
+    SCNNode *ballNode = [SCNNode node];
+    ballNode.geometry = [SCNSphere sphereWithRadius:0.5];
+    ballNode.position = SCNVector3Make(0, 1, 0);
+    [scene.rootNode addChildNode:ballNode];
     
     // create and configure a material
     SCNMaterial *material = [SCNMaterial material];
@@ -53,12 +59,22 @@
     // set the material to the 3d object geometry
     boxNode.geometry.firstMaterial = material;
     
+    SCNMaterial *materialBall = [material copy];
+    materialBall.multiply.contents = [UIColor redColor];
+    ballNode.geometry.firstMaterial = materialBall;
+    
     // animate the 3d object
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"rotation"];
     animation.toValue = [NSValue valueWithSCNVector4:SCNVector4Make(1, 1, 0, M_PI*2)];
     animation.duration = 5;
     animation.repeatCount = MAXFLOAT; //repeat forever
     [boxNode addAnimation:animation forKey:nil];
+    
+    
+    //add particle
+    SCNParticleSystem *fire = [SCNParticleSystem particleSystemNamed:@"FireParticle" inDirectory:nil];
+    
+    [scene.rootNode addParticleSystem:fire];
     
     // retrieve the SCNView
     SCNView *scnView = (SCNView *)self.view;

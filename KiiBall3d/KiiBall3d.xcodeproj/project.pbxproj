@@ -13,6 +13,8 @@
 		D534855E197646170097FF1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D534855C197646170097FF1B /* Main.storyboard */; };
 		D5348560197646170097FF1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D534855F197646170097FF1B /* Images.xcassets */; };
 		D534856C197646170097FF1B /* KiiBall3dTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D534856B197646170097FF1B /* KiiBall3dTests.m */; };
+		D534859A19767C6B0097FF1B /* FireParticle.scnp in Resources */ = {isa = PBXBuildFile; fileRef = D534859819767C6B0097FF1B /* FireParticle.scnp */; };
+		D534859B19767C6B0097FF1B /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = D534859919767C6B0097FF1B /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		D5348565197646170097FF1B /* KiiBall3dTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiiBall3dTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D534856A197646170097FF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D534856B197646170097FF1B /* KiiBall3dTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiiBall3dTests.m; sourceTree = "<group>"; };
+		D534859819767C6B0097FF1B /* FireParticle.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = FireParticle.scnp; sourceTree = "<group>"; };
+		D534859919767C6B0097FF1B /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				D534855C197646170097FF1B /* Main.storyboard */,
 				D534855F197646170097FF1B /* Images.xcassets */,
 				D5348552197646170097FF1B /* Supporting Files */,
+				D534859819767C6B0097FF1B /* FireParticle.scnp */,
+				D534859919767C6B0097FF1B /* spark.png */,
 			);
 			path = KiiBall3d;
 			sourceTree = "<group>";
@@ -196,6 +202,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D534859A19767C6B0097FF1B /* FireParticle.scnp in Resources */,
+				D534859B19767C6B0097FF1B /* spark.png in Resources */,
 				D534855E197646170097FF1B /* Main.storyboard in Resources */,
 				D5348560197646170097FF1B /* Images.xcassets in Resources */,
 			);
