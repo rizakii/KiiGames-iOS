@@ -9,11 +9,35 @@
 #import "GameViewController.h"
 
 @implementation GameViewController
+- (SCNNode *)loadNodeWithName:(NSString *)name fromSceneNamed:(NSString *)path
+{
+    // Load the scene from the specified file
+    SCNScene *scene = [SCNScene sceneNamed:path
+                               inDirectory:nil
+                                   options:@{SCNSceneSourceConvertToYUpKey : @YES,
+                                             SCNSceneSourceAnimationImportPolicyKey :SCNSceneSourceAnimationImportPolicyPlayRepeatedly}];
+    
+    // Retrieve the root node
+    SCNNode *node = scene.rootNode;
+    
+    // Search for the node named "name"
+    if (name) {
+        node = [node childNodeWithName:name recursively:YES];
+    } else {
+        node = node.childNodes[0];
+    }
+    
+    return node;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
+    
+    NSString* hotelPath = @"hotel.scnassets/models/hotel.dae";
+    
+    
     // create a new scene
     SCNScene *scene = [SCNScene scene];
 
@@ -38,7 +62,16 @@
     ambientLightNode.light.type = SCNLightTypeAmbient;
     ambientLightNode.light.color = [UIColor darkGrayColor];
     [scene.rootNode addChildNode:ambientLightNode];
+    SCNScene *carScene = [SCNScene sceneNamed:@"rc_car"];
+    SCNNode *chassisNode = [carScene.rootNode childNodeWithName:@"rccarBody" recursively:NO];
     
+    // setup the chassis
+    chassisNode.position = SCNVector3Make(0, -1, 1);
+    chassisNode.rotation = SCNVector4Make(0, M_PI*0.7, 0, M_PI);
+    chassisNode.scale = SCNVector3Make(0.1, 0.1, 0.1);
+    
+    [scene.rootNode addChildNode:chassisNode];
+
     // create and add a 3d box to the scene
     SCNNode *boxNode = [SCNNode node];
     boxNode.geometry = [SCNBox boxWithWidth:0.3 height:0.3 length:0.3 chamferRadius:0.02];
@@ -74,7 +107,8 @@
     //add particle
     SCNParticleSystem *fire = [SCNParticleSystem particleSystemNamed:@"FireParticle" inDirectory:nil];
     
-    [scene.rootNode addParticleSystem:fire];
+    [chassisNode addParticleSystem:fire];
+    
     
     // retrieve the SCNView
     SCNView *scnView = (SCNView *)self.view;

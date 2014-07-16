@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5328DEC1976E24F00730DC9 /* rc_car_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = D5328DEA1976E24F00730DC9 /* rc_car_texture.png */; };
+		D5328DED1976E24F00730DC9 /* rc_car.dae in Resources */ = {isa = PBXBuildFile; fileRef = D5328DEB1976E24F00730DC9 /* rc_car.dae */; };
 		D5348555197646170097FF1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5348554197646170097FF1B /* main.m */; };
 		D5348558197646170097FF1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5348557197646170097FF1B /* AppDelegate.m */; };
 		D534855B197646170097FF1B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D534855A197646170097FF1B /* GameViewController.m */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D5328DEA1976E24F00730DC9 /* rc_car_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rc_car_texture.png; sourceTree = "<group>"; };
+		D5328DEB1976E24F00730DC9 /* rc_car.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = rc_car.dae; sourceTree = "<group>"; };
 		D534854F197646170097FF1B /* KiiBall3d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiiBall3d.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5348553197646170097FF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5348554197646170097FF1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 		D5348551197646170097FF1B /* KiiBall3d */ = {
 			isa = PBXGroup;
 			children = (
+				D5328DEA1976E24F00730DC9 /* rc_car_texture.png */,
+				D5328DEB1976E24F00730DC9 /* rc_car.dae */,
 				D5348556197646170097FF1B /* AppDelegate.h */,
 				D5348557197646170097FF1B /* AppDelegate.m */,
 				D5348559197646170097FF1B /* GameViewController.h */,
@@ -171,6 +177,7 @@
 				TargetAttributes = {
 					D534854E197646170097FF1B = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 256TJXLZ8E;
 					};
 					D5348564197646170097FF1B = {
 						CreatedOnToolsVersion = 6.0;
@@ -206,6 +213,8 @@
 				D534859B19767C6B0097FF1B /* spark.png in Resources */,
 				D534855E197646170097FF1B /* Main.storyboard in Resources */,
 				D5348560197646170097FF1B /* Images.xcassets in Resources */,
+				D5328DED1976E24F00730DC9 /* rc_car.dae in Resources */,
+				D5328DEC1976E24F00730DC9 /* rc_car_texture.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = KiiBall3d/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = KiiBall3d/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +423,7 @@
 				D5348571197646170097FF1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5348572197646170097FF1B /* Build configuration list for PBXNativeTarget "KiiBall3dTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +432,7 @@
 				D5348574197646170097FF1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
